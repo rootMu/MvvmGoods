@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:outlineProvider="bounds">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.matthew.mvvmgoods.viewmodel.BasketItemViewModel"/>
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/goodsItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_background"
+        android:orientation="horizontal"
+        android:padding="@dimen/default_margin">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.name}"
+            android:textStyle="bold"
+            android:layout_toStartOf="@id/quantity"
+            android:layout_alignParentStart="true"
+            tools:text="Goods Item 1"/>
+
+        <TextView
+            android:id="@+id/quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text= "@{@string/quantity_string(viewModel.quanity)}"
+            android:textStyle="bold"
+            android:layout_toStartOf="@id/remove"
+            tools:text="x 1"/>
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.price}"
+            android:textStyle="italic"
+            android:layout_toStartOf="@id/remove"
+            tools:text="Price"
+            android:layout_centerVertical="true"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            app:srcCompat="@android:drawable/ic_input_add"
+            android:tint="@android:color/white"
+            android:layout_marginStart="@dimen/fab_margin" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/remove"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toStartOf="@id/add"
+            app:srcCompat="@android:drawable/ic_delete"
+            android:tint="@android:color/white"
+            android:layout_marginStart="@dimen/fab_margin"/>
+
+    </RelativeLayout>
+</layout>

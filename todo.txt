@@ -1,0 +1,3 @@
+Due to family commitments my time was limited to complete this and as such I didn't write it BDD.
+I was going to write unit tests for the conversion logic though with the time it is now I want to just get it across to you.
+I worked with my Base MVVM application I have which used to be a library but due to some IDE issues I had its now simply a package inside the project.

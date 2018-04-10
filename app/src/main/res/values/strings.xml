@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MVVM Goods App</string>
+
+    <string name="quantity_string">x %s</string>
+    <string name="total_string">Total: %1$s%2$s</string>
+    <string name="currency">Currency</string>
+</resources>
